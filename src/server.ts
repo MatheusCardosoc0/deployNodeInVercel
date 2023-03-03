@@ -7,7 +7,12 @@ app.use(express.json())
 const prisma = new PrismaClient()
 const port = process.env.PORT ?? 3030
 
-app.get('/books', async (req, res) => {
+
+app.get('/', (req, res) => {
+  return res.json({name: "weee"})
+})
+
+/*app.get('/books', async (req, res) => {
   
   const response = await prisma.book.findMany()
 
@@ -26,6 +31,6 @@ app.post('/register', async ( req: Request, res: Response) => {
   })
 
   return res.json(createBook)
-})
+})*/
 
 app.listen(port)
