@@ -9,7 +9,7 @@ const port = process.env.PORT ?? 3030
 
 
 app.get('/', (req, res) => {
-  return res.json({name: "weee"})
+  return res.json({name: "w"})
 })
 
 app.get('/books', async (req, res) => {
