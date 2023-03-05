@@ -33,4 +33,7 @@ app.post('/register', async ( req: Request, res: Response) => {
   return res.json(createBook)
 })
 
-app.listen(port)
+app.listen({
+  host: '0.0.0.0',
+  port: port
+})
